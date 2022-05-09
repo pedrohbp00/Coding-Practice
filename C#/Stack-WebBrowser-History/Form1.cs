@@ -1,4 +1,3 @@
-﻿//Alunos: Pedro Henrique Bezerro Pereira, Pedro Henrique Estarque
 //Projeto Integrador: Estrutura de Dados e Linguagem de Programação I.
 //Esta é uma aplicação que simula um navegador de internet tendo a pilha como estrutura de dado principal.
 
