@@ -1,18 +1,18 @@
-//AVL-TREE NODE MANAGEMENT
+//AVL-TREE NODE HANDLER
 //Date: 31/10/2020
 
 
 #include <stdio.h>
 #include <stdlib.h>
 
-//Estrutura de um nó da arvore AVL
+//Estrutura de um nÃ³ da arvore AVL
 typedef struct noAVL{
 	int conteudo;
 	int alt; //Altura
 	struct noAVL *dir, *esq;
 }noAVL;
 
-//Função que retorna o fator de balanceamento de um nó
+//FunÃ§Ã£o que retorna o fator de balanceamento de um nÃ³
 int fatorBal(noAVL *z){
 	
 	int altEsq, altDir;
@@ -33,7 +33,7 @@ int fatorBal(noAVL *z){
 	return(altEsq - altDir);
 }
 
-//Função que printa na tela um menu com opções para o usuario manipular a arvore
+//FunÃ§Ã£o que printa na tela um menu com opÃ§Ãµes para o usuario manipular a arvore
 void menu(){
 	
 		printf("\n1. Criar arvore AVL:");
@@ -45,7 +45,7 @@ void menu(){
 		
 }
 
-//Função que retorna a altura
+//FunÃ§Ã£o que retorna a altura
 int altura(noAVL *z){
 	
 	int altEsq, altDir;
@@ -102,7 +102,7 @@ noAVL * rotacionaDireita(noAVL *x){
 	return(y);
 }
 
-//Rotação dupla a direta
+//RotaÃ§Ã£o dupla a direta
 noAVL * dirEsq(noAVL *z){
 	
 	z->dir = rotacionaDireita(z->dir);
@@ -118,7 +118,7 @@ noAVL * esqEsquerda(noAVL *z){
 	return(z);
 }
 
-//Rotacação dupla a esquerda
+//RotacaÃ§Ã£o dupla a esquerda
 noAVL * esqDir(noAVL *z){
 	
 	z->esq = rotacionaEsquerda(z->esq);
@@ -127,7 +127,7 @@ noAVL * esqDir(noAVL *z){
 	return(z);
 }
 
-//Função que insere um nó na arvore
+//FunÃ§Ã£o que insere um nÃ³ na arvore
 noAVL * inserir(noAVL *z, int x){
 	
 	if(z == NULL)
@@ -138,7 +138,7 @@ noAVL * inserir(noAVL *z, int x){
 		z->dir = NULL;
 	}
 	else
-		if(x > z->conteudo)     //Inserção na subarvore da direita
+		if(x > z->conteudo)     //InserÃ§Ã£o na subarvore da direita
 		{
 			z->dir = inserir(z->dir, x);
 			if(fatorBal(z) == -2)
@@ -148,7 +148,7 @@ noAVL * inserir(noAVL *z, int x){
 					z = dirEsq(z);
 		}
 		else
-			if(x < z->conteudo)  //Inserção na subarvore da esquerda
+			if(x < z->conteudo)  //InserÃ§Ã£o na subarvore da esquerda
 			{
 				z->esq = inserir(z->esq, x);
 				if(fatorBal(z) == 2)
@@ -163,7 +163,7 @@ noAVL * inserir(noAVL *z, int x){
 		return(z);
 }
 
-//Função que remove um nó da arvore
+//FunÃ§Ã£o que remove um nÃ³ da arvore
 noAVL * remover(noAVL *z, int x){
 	
 	noAVL *p;
@@ -173,7 +173,7 @@ noAVL * remover(noAVL *z, int x){
 		return NULL;
 	}
 	else
-		if(x > z->conteudo)		//Inserção na subarvore da direita
+		if(x > z->conteudo)		//InserÃ§Ã£o na subarvore da direita
 		{
 			z->dir = remover(z->dir, x);
 			if(fatorBal(z) == 2)
@@ -222,7 +222,7 @@ noAVL * remover(noAVL *z, int x){
 	return(z);
 }
 
-//Função que passa pela arvore em "pre-ordem" printando os nós e seu fator de balanceamento
+//FunÃ§Ã£o que passa pela arvore em "pre-ordem" printando os nÃ³s e seu fator de balanceamento
 void preOrdem(noAVL *z){
 	if(z != NULL){
 		printf("%d[FatorBalanceamento = %d]", z->conteudo, fatorBal(z));
@@ -233,7 +233,7 @@ void preOrdem(noAVL *z){
 	}
 }
 
-//Função que passa pela arvore "em-ordem" printando os nós e seu fator de balanceamento
+//FunÃ§Ã£o que passa pela arvore "em-ordem" printando os nÃ³s e seu fator de balanceamento
 void emOrdem(noAVL *z)
 {
 	if(z != NULL){
