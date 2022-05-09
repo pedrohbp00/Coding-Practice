@@ -1,4 +1,3 @@
-﻿//Alunos: Pedro Henrique Bezerro Pereira, Pedro Henrique Estarque
 //Projeto Integrador: Estrutura de Dados I e Linguagem de Programação I
 //Este projeto utiliza como estrutura de dado principal a lista ligada linear.
 using System;
