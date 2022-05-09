@@ -1,0 +1,58 @@
+body{
+	background-color: rgb(170, 170, 170);
+	overflow: auto;
+	margin: 2;
+}
+
+h1{
+	height: 5px;
+}
+
+div.panel{
+	background-color: rgb(152, 255, 204);
+	padding: 10px 1px;
+}
+
+div.panel2{
+	background-color: rgb(255, 255, 255);
+	padding: 200px 10px;
+}
+
+div.navbar{
+	overflow: hidden;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 5%;
+	box-shadow: 5px 5px black;
+}
+
+div.navbar a{
+	float: left;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+div.navbar a.right{
+	float: right;
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+table{
+	float: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+
+}
+
+th, td{
+	border-collapse: collapse;
+}
