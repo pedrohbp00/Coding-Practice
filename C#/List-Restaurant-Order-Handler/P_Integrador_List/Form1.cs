@@ -1,4 +1,3 @@
-﻿//Alunos: Pedro Henrique Estarque, Pedro Henrique Bezerro Pereira.
 //Projeto Integrador: Estrutura de Dados I e Linguagem de Programação I.
 //Este programa tem como estrutura de dado principal a lista, esta aplicação simula um controle de comandas de um restaurante, onde o usuário insere o pedido e ele é atribuído a uma lista.
 
